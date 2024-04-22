@@ -1,3 +1,26 @@
+## py_trees_js (jazzy) - 0.6.4-1
+
+The packages in the `py_trees_js` repository were released into the `jazzy` distro by running `/usr/local/google/home/marcogg/migration/bin/bloom-release py_trees_js --rosdistro jazzy` on `Mon, 22 Apr 2024 11:20:34 -0000`
+
+The `py_trees_js` package was released.
+
+Version of package(s) in repository `py_trees_js`:
+
+- upstream repository: https://github.com/splintered-reality/py_trees_js.git
+- release repository: https://github.com/ros2-gbp/py_trees_js-release.git
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.6.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## py_trees_js (rolling) - 0.6.4-3
 
 The packages in the `py_trees_js` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling py_trees_js` on `Wed, 06 Mar 2024 18:45:33 -0000`

@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>py_trees_js</name>
-  <version>0.6.5</version>
+  <version>0.6.6</version>
   <description>
     Javascript library for visualising behaviour trees.
   </description>
@@ -12,9 +12,9 @@
 
   <license>BSD</license>
 
-  <url type="website">https://github.com/splintered-treality/py_trees_js</url>
-  <url type="repository">https://github.com/splintered-treality/py_trees_js</url>
-  <url type="bugtracker">https://github.com/splintered-treality/py_trees_js/issues</url>
+  <url type="website">https://github.com/splintered-reality/py_trees_js</url>
+  <url type="repository">https://github.com/splintered-reality/py_trees_js</url>
+  <url type="bugtracker">https://github.com/splintered-reality/py_trees_js/issues</url>
 
   <build_depend>python3-setuptools</build_depend>
   <build_depend>pyqt5-dev-tools</build_depend>

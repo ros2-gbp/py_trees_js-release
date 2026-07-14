@@ -132,11 +132,11 @@ tracks:
     patches: null
     release_inc: '4'
     release_repo_url: null
-    release_tag: 0.6.6
+    release_tag: 0.6.7
     ros_distro: lyrical
     vcs_type: git
     vcs_uri: https://github.com/splintered-reality/py_trees_js.git
-    version: 0.6.6
+    version: 0.6.7
   rolling:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri

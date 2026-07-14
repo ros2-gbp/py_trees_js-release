@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>py_trees_js</name>
-  <version>0.6.6</version>
+  <version>0.6.7</version>
   <description>
     Javascript library for visualising behaviour trees.
   </description>
@@ -20,7 +20,11 @@
   <build_depend>pyqt5-dev-tools</build_depend>
   <build_depend>qttools5-dev-tools</build_depend>
 
-  <exec_depend>python3-qt5-bindings</exec_depend>
+  <!-- 
+    The python3-pyqt5 rosdep key pulls in python3-sip-dev, which no longer exists on Ubuntu 26.04+ (lyrical and rolling).
+    See https://github.com/ros/rosdistro/pull/52527 for a fix, which could remove these conditions.
+  -->
+  <exec_depend condition="$ROS_DISTRO != lyrical and $ROS_DISTRO != rolling">python3-pyqt5</exec_depend>
   <exec_depend>python3-pyqt5.qtwebengine</exec_depend>
 
   <export>

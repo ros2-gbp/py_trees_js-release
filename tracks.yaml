@@ -160,8 +160,8 @@ tracks:
     patches: null
     release_inc: '3'
     release_repo_url: null
-    release_tag: 0.6.6
+    release_tag: 0.6.7
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/splintered-reality/py_trees_js.git
-    version: 0.6.6
+    version: 0.6.7

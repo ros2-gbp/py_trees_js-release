@@ -3,7 +3,7 @@
 ################################################################################
 # This is a minimal setup.py for enabling ROS builds.
 #
-# For all other modes of development, use poetry and pyproject.toml
+# For all other modes of development, use uv and pyproject.toml
 ################################################################################
 
 import os
@@ -34,13 +34,18 @@ setup(
     #   py_trees-<version.css>
     #   py_trees_js/viewer/html/index.html
     #   py_trees_js/resources.qrc
-    version="0.6.7",
+    version="0.7.0",
     packages=find_packages(exclude=["tests*", "docs*"]),
     data_files=[
         ("share/" + package_name, ["package.xml"]),
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ] + gather_js_files(),
     package_data={"py_trees_js": ["viewer/*.ui", "viewer/html/*", "viewer/images/*"]},
+    # The PEP 621 [project] table in pyproject.toml flips setuptools' default to
+    # include_package_data=True, which makes it warn that viewer/html and viewer/images
+    # are "importable packages absent from the packages configuration". The explicit
+    # package_data above is all we need.
+    include_package_data=False,
     author="Daniel Stonier",
     maintainer="Daniel Stonier <d.stonier@gmail.com>, Sebastian Castro <sebas.a.castro@gmail.com>",
     url="https://github.com/splintered-reality/py_trees_js",
@@ -48,7 +53,6 @@ setup(
     zip_safe=True,
     classifiers=[
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Software Development :: Libraries",
@@ -60,7 +64,7 @@ setup(
         "Javascript libraries for visualising executing or log-replayed behaviour trees."
         "Includes a qt-js hybrid viewer for development and demonstration purposes."
     ),
-    license="BSD",
+    license="BSD-3-Clause",
     entry_points={
         "console_scripts": [
             "py-trees-demo-viewer = py_trees_js.viewer.viewer:main",
